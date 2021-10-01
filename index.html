@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ScoreKeeper</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
 </head>
@@ -13,6 +14,11 @@
 <body>
 
     <h1><span id="p1Score">0</span> to <span id="p2Score">0</span></h1>
+    <select name="" id="playto">
+        <option value="5">5</option>
+        <option value="7">7</option>
+        <option value="10">10</option>
+    </select>
     <button id="p1btn">+1 Player 1</button>
     <button id="p2btn">+1 Player 2</button>
     <button id="reset">Reset</button>
