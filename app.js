@@ -14,6 +14,11 @@ p1btn.addEventListener('click', () => {
         p1Score.textContent = p1Count += 1;
         if (p1Count === winningScore) {
             isGameover = true
+            p1Score.classList.add('has-text-success')
+            p2Score.classList.add('has-text-danger')
+            p1btn.disabled = true;
+            p2btn.disabled = true;
+
         }
         p1Score.textContent = p1Count
     }
@@ -25,6 +30,10 @@ p2btn.addEventListener('click', () => {
         p2Score.textContent = p2Count += 1
         if (p2Count === winningScore) {
             isGameover = true
+            p2Score.classList.add('has-text-success')
+            p1Score.classList.add('has-text-danger')
+            p1btn.disabled = true;
+            p2btn.disabled = true;
         }
         p2Score.textContent = p2Count
     }
@@ -38,6 +47,10 @@ function resetFunc() {
     p2Count = 0;
     p1Score.textContent = 0;
     p2Score.textContent = 0;
+    p1Score.classList.remove('has-text-success', 'has-text-danger')
+    p2Score.classList.remove('has-text-success', 'has-text-danger')
+    p1btn.disabled = false;
+    p2btn.disabled = false;
 }
 reset.addEventListener('click', resetFunc)
 
